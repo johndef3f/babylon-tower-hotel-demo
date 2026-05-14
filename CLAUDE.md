@@ -21,6 +21,55 @@ Babylon_Tower_Hotel_Demo/
 └── vite.config.js            # 含 saveParamsPlugin（GUI 儲存到 main.js）
 ```
 
+## 新裝置首次設定
+
+### 1. 安裝必要工具（Windows，若尚未安裝）
+```powershell
+winget install OpenJS.NodeJS
+winget install Git.Git
+winget install --id GitHub.cli
+```
+安裝完後**重新開啟終端機**，然後登入 GitHub：
+```powershell
+gh auth login
+# 選 GitHub.com → HTTPS → 用瀏覽器登入
+```
+
+### 2. Clone 專案
+```powershell
+git clone https://github.com/johndef3f/babylon-tower-hotel-demo.git
+cd babylon-tower-hotel-demo
+```
+
+### 3. 放回 FBX（不進版控，需手動複製）
+`assets/Demo_Sences.fbx` 沒有上傳 GitHub（檔案太大）。
+請從原始電腦複製 `Demo_Sences.fbx`，放到專案根目錄下的 `assets/` 資料夾。
+
+### 4. 安裝套件並啟動
+```powershell
+npm install
+npm run dev
+# 開啟 http://localhost:5173
+```
+
+---
+
+## 日常開發流程
+
+### 開始前（拉最新版）
+```powershell
+git pull
+```
+
+### 改完後（推回 GitHub）
+```powershell
+git add .
+git commit -m "說明這次改了什麼"
+git push
+```
+
+---
+
 ## 啟動開發環境
 ```bash
 npm install
