@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Babylon Tower Hotel</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #1a0f1a; overflow: hidden; }
+    canvas { display: block; }
+
+    #loading {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #1a0f1a;
+      color: #00ffaa;
+      font-family: monospace;
+      font-size: 14px;
+      letter-spacing: 2px;
+      z-index: 10;
+      transition: opacity 0.8s ease;
+    }
+    #loading.hidden { opacity: 0; pointer-events: none; }
+
+    #loading-bar-wrap {
+      width: 240px;
+      height: 2px;
+      background: #2a1a2a;
+      margin-top: 16px;
+    }
+    #loading-bar {
+      height: 100%;
+      width: 0%;
+      background: #00ffaa;
+      box-shadow: 0 0 8px #00ffaa;
+      transition: width 0.2s ease;
+    }
+
+    #hint {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #ff00ff88;
+      font-family: monospace;
+      font-size: 12px;
+      letter-spacing: 1px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="loading">
+    <span id="loading-text">LOADING SCENE...</span>
+    <div id="loading-bar-wrap"><div id="loading-bar"></div></div>
+  </div>
+  <div id="hint">Scroll to move camera vertically</div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

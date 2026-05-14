@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.DS_Store
+
+# FBX 場景檔體積大，不進版控（需自行放到 assets/）
+assets/
